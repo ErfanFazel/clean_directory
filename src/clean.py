@@ -4,6 +4,7 @@ from src.data import DATA_DIR
 from src.utils.io import read_json
 from loguru import logger
 from typing import Union
+import sys
 class OrgenizeFiles:
     """
     This class is used to orgenize files in a directory by
@@ -43,4 +44,5 @@ class OrgenizeFiles:
 
 if __name__ == "__main__":
     org_file = OrgenizeFiles()
-    org_file(directory="/mnt/c/Users/Erfan/Downloads/Telegram Desktop")
+    org_file(directory=sys.argv[1])
+    logger.info("Done")
